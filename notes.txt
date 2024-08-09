@@ -1,0 +1,17 @@
+
+## Void elements : 
+A void element is an element whose content model never allows it
+to have contents under any circumstances. Void elements can have
+attributes. The following is a complete list of the void elements in
+HTML : area , base , br , col , command , embed , hr , img
+, input , keygen , link , meta , param , source , track
+, wbr.
+
+## 3 types of element : 
+1. Bolck element - Takes the entire line/row of screen
+2. Inline-block element - Takes as much space as it needs to
+3. Inline element - appears inline of text. 
+
+## Divs : 
+They are just boxes that contains other elements.
+

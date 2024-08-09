@@ -14,11 +14,6 @@
       margin-bottom: 0;
     }
 
-    .thumbnails{
-      width: 300px;
-      display: block;
-    }
-
     .search-box{
       font-size: 18px;
       font-family: monospace;
@@ -26,21 +21,31 @@
       padding: 4px;
       display: block;
     }
+
+    .video-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 30px;
+    }
+
+    .thumbnails{
+      width: 100%;
+    }
+
+
     .video-item{
-      width: 300px;
-      display: inline-block;
-      vertical-align: top;
-      margin: 8px;
+    }
+
+    .video-info-grid{
+     display: grid;
+     grid-template-columns: 50px 1fr;
     }
 
     .channel-logo{
-      display: inline-block;
-      width: 40px;
       vertical-align: top;
     }
     .video-info{
-      display: inline-block;
-      width: 220px;
       margin-left: 8px;
     }
     .profile-picture{
@@ -66,18 +71,18 @@
       font-size: 14sp;
       color: rgb(96, 96, 96);
     }
-
   </style>
 </head>
 <body>
   <input class="search-box" type="text" placeholder="Search">
-  <div
+  <div class="video-grid">
+    <div
     class="video-item"
   >
   <div class="thum-row">
     <img class="thumbnails" src="thumbnails/thumb1.webp">
   </div>
-  <div>
+  <div class="video-info-grid">
     <div class="channel-logo">
       <img class="profile-picture" src="channel_logos/channel1.jpg">
     </div>
@@ -90,13 +95,11 @@
 
   </div>
 
-  <div
-  class="video-item"
->
+  <div class="video-item">
 <div class="thum-row">
   <img class="thumbnails" src="thumbnails/thumb2.webp">
 </div>
-<div>
+<div class="video-info-grid">
   <div class="channel-logo">
     <img class="profile-picture" src="channel_logos/channel2.jpg">
   </div>
@@ -108,6 +111,79 @@
 </div>
 
 </div>
+
+<div
+class="video-item"
+>
+<div class="thum-row">
+<img class="thumbnails" src="thumbnails/thumb1.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-logo">
+  <img class="profile-picture" src="channel_logos/channel1.jpg">
+</div>
+<div class="video-info">
+  <p class="video-title">100+ JavaScript Concepts you Need to Know</p>
+  <p class="video-author">Fireship</p>
+  <p class="video-stats">1.9M views &#183; 1 year ago</p>
+</div>
+</div>
+
+</div>
+
+<div class="video-item">
+<div class="thum-row">
+<img class="thumbnails" src="thumbnails/thumb2.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-logo">
+<img class="profile-picture" src="channel_logos/channel2.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">Quantum Computers, explained with MKBHD</p>
+<p class="video-author">Cleo Abram</p>
+<p class="video-stats">7.9M views &#183; 2 year ago</p>
+</div>
+</div>
+
+</div>
+
+<div
+class="video-item"
+>
+<div class="thum-row">
+<img class="thumbnails" src="thumbnails/thumb1.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-logo">
+  <img class="profile-picture" src="channel_logos/channel1.jpg">
+</div>
+<div class="video-info">
+  <p class="video-title">100+ JavaScript Concepts you Need to Know</p>
+  <p class="video-author">Fireship</p>
+  <p class="video-stats">1.9M views &#183; 1 year ago</p>
+</div>
+</div>
+
+</div>
+
+<div class="video-item">
+<div class="thum-row">
+<img class="thumbnails" src="thumbnails/thumb2.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-logo">
+<img class="profile-picture" src="channel_logos/channel2.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">Quantum Computers, explained with MKBHD</p>
+<p class="video-author">Cleo Abram</p>
+<p class="video-stats">7.9M views &#183; 2 year ago</p>
+</div>
+</div>
+
+</div>
+  </div>
 
 </body>
 </html>

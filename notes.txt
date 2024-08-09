@@ -14,4 +14,24 @@ HTML : area , base , br , col , command , embed , hr , img
 
 ## Divs : 
 They are just boxes that contains other elements.
+We use divs along with nested layout techniques 
+to create any/every kind of design.
+We device every design into multiple vertical/horizontal
+grids to achive whatever the design we want to create.
+
+## Css Grids : 
+Css grids are another way to organize our html components to give them
+proper structure.
+Grid are better way of creating nested layout. It helps 
+us design our web page by using rows and cloumns.
+When we define grid-templete-columns with 1fr that means it 
+will take rest of the screen space available to it. 
+
+So instead of using inline-block to create horizontal divs
+we can use css grid to achive the same with lot more flixiblity.
+
+
+## Inline style : 
+When we declare css inside our html directly. 
+
 

@@ -35,3 +35,13 @@ we can use css grid to achive the same with lot more flixiblity.
 When we declare css inside our html directly. 
 
 
+##Flexbox : 
+Flexbox is another way to create horizontal layouts 
+while maintaing alignment
+
+# Flexbox vs Grid : 
+https://www.geeksforgeeks.org/comparison-between-css-grid-css-flexbox/
+
+
+
+

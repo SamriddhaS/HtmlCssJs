@@ -3,7 +3,8 @@
 document.getElementById("pageTitle").textContent = 'Welcome To Js Course'
 document.getElementById("pageDescription").textContent = 'We are going to learn a lot'
 
-//Veriables
+//########## Veriables ###################################
+
 let x; //Declare the variable
 x = 2000; // assign the variable
 
@@ -24,3 +25,24 @@ document.getElementById("age").textContent = `${name}'s age is ${age}. Data type
 document.getElementById("isMarried").textContent = `${name}'s is Married : ${isMarried}. Data type is : ${typeof isMarried}`
 document.getElementById("salary").textContent = `${name}'s salary is ${salary}. Data type is : ${typeof salary}`
 
+//##################  Operators ###########################################
+let firstNum = 89
+let secondNumber = 8
+
+document.getElementById("operators").textContent 
+= `First number + Second is ${firstNum+secondNumber} 
+   First number - Second is ${firstNum-secondNumber}
+   First number * Second is ${firstNum*secondNumber}
+   First number (exponent **) Second is ${firstNum**secondNumber}
+   First number / Second is ${firstNum/secondNumber}
+   First number % Second is ${firstNum%secondNumber}
+   First number++ = ${++firstNum}
+   First number-- = ${--firstNum}
+`
+/* 
+Operator precedence will be like this : 
+1. Parenthesis ()
+2. Exponents (**)
+3. multiplication(*) , division(/) & modulo (%)
+4. Addition and subtraction (+,-)
+*/

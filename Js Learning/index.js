@@ -46,3 +46,30 @@ Operator precedence will be like this :
 3. multiplication(*) , division(/) & modulo (%)
 4. Addition and subtraction (+,-)
 */
+
+
+//############# Accept user input ######################
+
+// Easy Way 
+document.getElementById("acceptButton").onclick = function(){
+    acceptUsserInput()
+}
+
+function acceptUsserInput(){
+    let name  = window.prompt(`what is you name ?`)
+    document.getElementById("userInput").textContent = `Hello ${name}, Welcome to JS!`
+
+}
+
+// using input field
+let userName = ""
+let userPassword = ""
+document.getElementById("submitBtn").onclick = function(){
+    userName = document.getElementById("userName").value;
+    userPassword = document.getElementById("password").value;
+    if(userName===""||userPassword===""){
+        document.getElementById("outPut").textContent = `user name or password is empty`
+        return;
+    }
+    document.getElementById("outPut").textContent = `Hello ${userName}, Welcome to JS!. Your password is = ${userPassword}`
+}

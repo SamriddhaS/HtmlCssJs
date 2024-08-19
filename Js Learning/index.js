@@ -73,3 +73,18 @@ document.getElementById("submitBtn").onclick = function(){
     }
     document.getElementById("outPut").textContent = `Hello ${userName}, Welcome to JS!. Your password is = ${userPassword}`
 }
+
+
+
+//########### Variable Scopes ####################
+// Local variable scope vs Global variable scope
+
+const myVar = "Its a global scoped function"
+
+function one(){
+    let localVar = 1123 // its a local scope function.
+    console.log(localVar)
+    return ""
+}
+
+one()

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Temperature Converter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h1 id="headerTitle">Temperature Converter</h1>
+        </div>
+        <div id="containerDiv">
+            <p id="enterTempHading" >Enter Temperature here</p>
+            <input 
+            id="inputField"
+            type="number"
+            value="0"
+            >
+            <div id="radioBtnsDiv">
+                <div id="radioBtn">    
+                    <input type="radio" id="toFahr" name="tempConversion"> 
+                    <label for="toFahr">Celsius -To- Fahrenheit</label>
+                </div>
+                <div id="radioBtn">
+                    <input type="radio" id="toCelcius" name="tempConversion"> 
+                    <label for="toCelcius">Fahrenheit -To- Celsius</label>
+                </div>
+            </div>
+            <div id="resultDiv">
+                <p class="resulttext">Result</p>
+                <p class="resulttext" id="result"></p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

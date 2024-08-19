@@ -1,0 +1,59 @@
+body{
+    font-family: monospace,sans-serif;
+}
+
+p{
+    padding: 8px;
+    font-size: 20px;
+    color: black;
+}
+
+#headerTitle{
+    text-align: center;
+    font-family: monospace;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+#containerDiv{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh; /* This will center the content vertically in the viewport */
+        text-align: center; /* This will center the text and inline elements */
+}
+
+#inputField{
+    width: 300px;
+    background-color: beige;
+    height: 30px;
+    color: black;
+    font-family: monospace;
+    border-radius: 10px;
+}
+
+#radioBtnsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+#radioBtn{
+    flex: 1;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#resultDiv{
+    background: cadetblue;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.resulttext{
+    color: rgb(231, 229, 190);
+    font-size: 28px;
+    font-weight: 800;
+}

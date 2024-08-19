@@ -43,5 +43,9 @@ while maintaing alignment
 https://www.geeksforgeeks.org/comparison-between-css-grid-css-flexbox/
 
 
+############ Java Script ##########################
+
+1. Everything in javascript happes inside an "Execution Context"
+
 
 

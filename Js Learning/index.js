@@ -126,3 +126,68 @@ function listOfProgrammingLang(...lang){
 }
 
 listOfProgrammingLang("c",1221,"c++","python",11311)
+
+
+//############### callbacks ########################
+
+function hello(onclickcallback){
+    console.log("inside helo")
+    onclickcallback();
+}
+
+hello(myCallabck);
+
+function myCallabck(){
+    console.log("this is my callback function");
+}
+
+
+//################### For Each / Map ###########################
+
+// Differences between forEach() and map() methods
+// The forEach() method does not returns a new array based
+// on the given array. The map() method returns an entirely
+// new array. The forEach() method returns “undefined“. The 
+// map() method returns the newly created 
+// array according to the provided callback function.
+
+
+// ################## Funtion As Expression | Arrow Function #########
+
+function normalFun(){
+    console.log("function decleraction")
+}
+
+// function as expression
+const myFun = function(){
+    console.log("function as expression")
+}
+
+
+// Also Function as expression
+setTimeout(function(){
+    console.log("This is also - function as expression")
+},3000)
+
+normalFun();
+myFun();
+
+//// Arrow Functions ////////
+const myArrowFun = () => console.log("Arrow expression")
+
+myArrowFun()
+
+const myArrowFun2 = (fullName,age) => {
+    console.log(`hello ${fullName}, nice to meet you. You are ${age} years old`)
+}
+
+myArrowFun2("Samriddha","26");
+
+const names = ["Sam","Ram","Jam","Pam","Bam"]
+
+const outPut = names.map((element) => 
+    {
+        return element.toUpperCase()
+    })
+
+console.log(`list of names ${outPut}`)

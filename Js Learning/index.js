@@ -115,3 +115,14 @@ let vegtables = ["Muli","Kaddu","Alu","Tomato","Vindi"]
 let mainCourse = [...foods,...vegtables,"AddSomeSalt","Someoil"]
 
 console.log(...mainCourse)
+
+
+//############ Rest Parameters #####################
+// function abc(..restParameter)
+// combines multiple function arguments into one arrey.
+// 
+function listOfProgrammingLang(...lang){
+    console.log(lang.join(" | "))
+}
+
+listOfProgrammingLang("c",1221,"c++","python",11311)

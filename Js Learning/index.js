@@ -79,6 +79,7 @@ document.getElementById("submitBtn").onclick = function(){
 //########### Variable Scopes ####################
 // Local variable scope vs Global variable scope
 
+// global variable
 const myVar = "Its a global scoped function"
 
 function one(){
@@ -88,3 +89,29 @@ function one(){
 }
 
 one()
+
+//############ Spread Operators #####################
+// Spread operator = ...
+// Allows an iterable such as an arrey or string to be
+// expanded into seperate elememts.
+
+let numbers = [10,12,30,14,56,33,123,89]
+
+// this will unpack the array elements one by one
+console.log(Math.max(...numbers)) 
+
+let myName = "SamriddhaSamanta"
+// breaks the entire string into individual chracters.
+let letters = [...myName]
+console.log("Length of the letter:"+letters.length)
+console.log("Letters : "+letters)
+console.log("Letters : "+letters.join('-'))
+
+/// Combining multiple arryes into one using spread operator
+
+let foods = ["Roti","Sabji","Dal","Chawal","Biriani"]
+let vegtables = ["Muli","Kaddu","Alu","Tomato","Vindi"]
+
+let mainCourse = [...foods,...vegtables,"AddSomeSalt","Someoil"]
+
+console.log(...mainCourse)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Password Generator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="headerTitle">JS Password Generator</h1>
+        <p id="showValue">0</p>
+        <div id="generatorOptionsDiv" >
+            <div class="optionsBox">
+                <input type="checkbox" id="includeSplChrac" name="tempConversion"> 
+                <label for="toCelcius">Special Characters</label>
+            </div>
+            <div  class="optionsBox">
+                <input type="checkbox" id="includeUpperCase" name="tempConversion"> 
+                <label for="toCelcius">Upper Cases</label>
+            </div>
+            <div  class="optionsBox">
+                <input type="checkbox" id="includeNumbers" name="tempConversion"> 
+                <label for="toCelcius">Numbers</label>
+            </div>
+        </div>
+        <div id="btnContainerDiv">
+            <button id="generateBtn">Generate Password</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

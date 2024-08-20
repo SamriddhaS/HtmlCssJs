@@ -1,0 +1,50 @@
+#showValue{
+    text-align: center;
+    color: black;
+    font-size: 3em;
+    font-family: monospace;
+}
+
+#headerTitle{
+    text-align: center;
+    font-family: monospace;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+#btnContainerDiv{
+    background-color: aqua;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#generatorOptionsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 18px;
+    align-content: center;
+}
+
+.optionsBox{
+    flex: 1;
+}
+
+#btnContainerDiv button{
+    flex: 1;
+    margin: 15px;
+    height: 50px;
+    font-family: monospace;
+    font-size : 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(145, 133, 237);
+    color: black;
+}
+
+#btnContainerDiv button:hover{
+    background-color: rgb(67, 51, 183);
+    color: aliceblue;
+}

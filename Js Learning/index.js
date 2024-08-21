@@ -431,3 +431,88 @@ const { name0, age0, city0 = 'Unknown' } = person0;
 console.log(name0);  // 'Mike'
 console.log(age0);   // 40
 console.log(city0);  // 'Unknown' (default value)
+
+
+/////// ############# NESTED OBJECTS #############/////
+
+const productCatalog = {
+    electronics: {
+        laptop: {
+            brand: 'Dell',
+            model: 'XPS 13',
+            specs: {
+                processor: 'Intel i7',
+                ram: '16GB',
+                storage: '512GB SSD'
+            }
+        },
+        phone: {
+            brand: 'Apple',
+            model: 'iPhone 13',
+            specs: {
+                processor: 'A15 Bionic',
+                ram: '4GB',
+                storage: '256GB'
+            }
+        }
+    },
+    homeAppliances: {
+        refrigerator: {
+            brand: 'Samsung',
+            model: 'Family Hub',
+            features: {
+                capacity: '28 cu. ft.',
+                smartControl: true
+            }
+        },
+        microwave: {
+            brand: 'Panasonic',
+            model: 'NN-SN966S',
+            features: {
+                capacity: '2.2 cu. ft.',
+                inverterTechnology: true
+            }
+        }
+    }
+};
+
+// Accessing nested properties
+console.log(productCatalog.electronics.laptop.brand);   // 'Dell'
+console.log(productCatalog.electronics.phone.specs.storage); // '256GB'
+console.log(productCatalog.homeAppliances.refrigerator.features.smartControl); // true
+
+///////Example 5: Nested Objects with Arrays
+
+const school = {
+    name: 'Greenwood High',
+    address: {
+        street: '456 Elm St',
+        city: 'Springfield',
+        postalCode: '12345'
+    },
+    classes: [
+        {
+            className: 'Math 101',
+            teacher: 'Mr. Adams',
+            students: [
+                { name: 'John', grade: 'A' },
+                { name: 'Alice', grade: 'B' }
+            ]
+        },
+        {
+            className: 'History 201',
+            teacher: 'Ms. Baker',
+            students: [
+                { name: 'Bob', grade: 'B' },
+                { name: 'Eve', grade: 'A' }
+            ]
+        }
+    ]
+};
+
+// Accessing nested properties
+console.log(school.address.city);               // 'Springfield'
+console.log(school.classes[0].className);       // 'Math 101'
+console.log(school.classes[1].students[1].name); // 'Eve'
+
+

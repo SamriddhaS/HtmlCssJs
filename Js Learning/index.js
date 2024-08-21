@@ -191,3 +191,164 @@ const outPut = names.map((element) =>
     })
 
 console.log(`list of names ${outPut}`)
+
+
+// ################## Objects Oriented Proframming In Js #########
+
+// This is a object in JS, 
+// it can be a key value pair like we use in json.
+const animal = {
+    name : "cat",
+    numberOfLegs : 4,
+    hasHands : false,
+    isMamel:true,
+    makeSound : () => console.log("Mew, mew, meeewwww...")
+}
+
+console.log(animal.name)
+console.log(animal.numberOfLegs)
+animal.makeSound()
+
+const human = new Object();
+human.noOfLegs = 4;
+human.noOfFingers = 20;
+
+console.log(human.noOfLegs)
+console.log(human.noOfFingers)
+
+// We can use
+// JsObject along with new keyword to create 
+// something thats similar to classes in OOP's langs.
+
+// Function with constructures : special method for defining the properties
+// and methods of objects.
+function Food(name,color,isHealthy,price){
+    this.name = name;
+    this.color = color;
+    this.isHealthy = isHealthy;
+    this.price = price;
+}
+
+// Now we can create multiple veriables that has 
+// similar properties of Food. "new" keyword helps 
+// to create the variable and provide value.
+const rice = new Food("Rice","white",true,"$10.00")
+const daal = new Food("Daal","Yellow","false","$13.89")
+
+console.log(rice)
+console.log(daal)
+
+////###### Classes in JS ############
+// class = (ES6 feature) provides a more structured and cleaner way to
+// work with objects compared to traditional constructor function
+// ex. static keyword, encapsulation, inheritance
+
+class Dish{
+    constructor(name,price){
+        this.name = name;
+        this.price = price
+    }
+
+    printFoodDetails(){
+        console.log(`Dish Name: ${this.name} price: ${this.price}`)
+    }
+
+    printPriceWithGST(){
+        console.log(`Dish Name: ${this.name} price+GST: ${this.price+(this.price*(18/100))}`)
+    }
+
+    // Static variables can be accessed without 
+    // creating an object of a class. 
+    static staticVariable = "This is a static variable"
+}
+
+const chicken = new Dish("Chicken Tikka","99.89")
+const mutton = new Dish("Mutton Nihari","199.89")
+
+console.log(chicken)
+chicken.printFoodDetails();
+chicken.printPriceWithGST();
+mutton.printFoodDetails();
+mutton.printPriceWithGST();
+
+// calling static variable without creating an object first.
+console.log(Dish.staticVariable)
+
+///// Inheritance //////////////////
+class Currey extends Dish {
+
+    constructor(name, price, spiceLevel) {
+        // Call the parent class constructor with name and price
+        // using super keyword
+        super(name, price);
+        this.spiceLevel = spiceLevel;
+    }
+    makeCurrey(params) {
+        console.log("making some currey")
+    }
+}
+
+const chickenCurrey = new Currey("PaneerCurrey",33.09,"high");
+console.log(chickenCurrey.printFoodDetails())
+
+
+
+//// Getters and setters in js /////////////////
+
+class Person {
+    constructor(firstName, lastName) {
+      this._firstName = firstName;
+      this._lastName = lastName;
+    }
+  
+    // Getter for fullName
+    get fullName() {
+      return `${this._firstName} ${this._lastName}`;
+    }
+  
+    // Setter for fullName
+    set fullName(name) {
+      const [firstName, lastName] = name.split(' ');
+      this._firstName = firstName;
+      this._lastName = lastName;
+    }
+  
+    // Getter for firstName
+    get firstName() {
+      return this._firstName;
+    }
+  
+    // Setter for firstName
+    set firstName(name) {
+      this._firstName = name;
+    }
+  
+    // Getter for lastName
+    get lastName() {
+      return this._lastName;
+    }
+  
+    // Setter for lastName
+    set lastName(name) {
+      this._lastName = name;
+    }
+  }
+  
+  // Usage
+  const person = new Person('John', 'Doe');
+  
+  // Using getters
+  console.log(person.fullName); // John Doe
+  
+  // Using setters
+  person.fullName = 'Jane Smith';
+  console.log(person.fullName); // Jane Smith
+  
+  // Accessing individual properties with getters
+  console.log(person.firstName); // Jane
+  console.log(person.lastName);  // Smith
+  
+  // Modifying individual properties with setters
+  person.firstName = 'Alice';
+  console.log(person.fullName); // Alice Smith
+  

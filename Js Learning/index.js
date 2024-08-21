@@ -165,9 +165,9 @@ const myFun = function(){
 
 
 // Also Function as expression
-setTimeout(function(){
-    console.log("This is also - function as expression")
-},3000)
+// setTimeout(function(){
+//     console.log("This is also - function as expression")
+// },3000)
 
 normalFun();
 myFun();
@@ -604,3 +604,115 @@ console.log("export with a different name--"+mul(4, 5));  // Output: 20
 
 // Importing everything from the module.
 import * as math from './MathUtil.js';
+
+
+const element = document.getElementById("fruits")
+
+
+
+//######## DOM Navigation ############################
+
+//1. Accessing an Element by ID
+// Access the 'fruits' list
+const fruitsList = document.getElementById('fruits');
+console.log(fruitsList);
+
+//2. Accessing Child Elements
+// Access all 'li' elements in the 'fruits' list
+const fruitItems = fruitsList.children;
+console.log(fruitItems);
+
+//3. Accessing Specific Child Elements
+// Access the first 'li' element (Apple)
+const firstFruit = fruitsList.children[0];
+console.log(firstFruit.textContent);  // Output: Apple
+
+//4. Navigating to Sibling Elements
+// Access the next sibling of the first 'li' (Apple)
+const nextFruit = firstFruit.nextElementSibling;
+console.log(nextFruit.textContent);  // Output: Banana
+
+//5. Navigating to the Parent Element
+// Access the parent element of the first 'li' (Apple)
+const parentList = firstFruit.parentElement;
+console.log(parentList.id);  // Output: fruits
+
+//6. Combining Navigation
+// Access the 'vegtables' list
+const vegList = document.getElementById('vegtables');
+
+// Access the first 'li' element in the 'vegtables' list
+const firstVeg = vegList.children[0];
+console.log(firstVeg.textContent);  // Output: Potato
+
+
+//1. Adding New Elements
+// Create a new 'li' element
+const newFruit = document.createElement('li');
+const newFruit2 = document.createElement('li');
+
+// Set the text content of the new element
+newFruit.textContent = 'Mango';
+newFruit2.textContent = 'Pinapple';
+
+// Append the new 'li' to the 'fruits' list
+const fruitsList1 = document.getElementById('fruits');
+fruitsList1.appendChild(newFruit);
+fruitsList1.appendChild(newFruit2);
+
+////
+
+// Create a new 'li' element
+const newVeg = document.createElement('li');
+
+// Set the text content
+newVeg.textContent = 'Carrot';
+
+// Insert the new 'li' as the first child of the 'vegtables' list
+const vegList1 = document.getElementById('vegtables');
+vegList1.insertBefore(newVeg, vegList.firstChild);
+
+
+////////////2. Changing Elements
+
+// Access the first 'li' element in the 'oils' list
+const oilsList = document.getElementById('oils');
+const firstOil = oilsList.children[0];
+
+// Change its text content
+firstOil.textContent = 'Olive Oil';
+
+// Access all 'li' elements in the 'fruits' list
+const fruitItems2 = fruitsList.children;
+
+// Loop through each 'li' and change its background color
+for (let i = 0; i < fruitItems2.length; i++) {
+    fruitItems2[i].style.backgroundColor = 'lightgreen';
+}
+
+////////// 3. Removing Elements
+// Access the last 'li' element in the 'vegtables' list
+const lastVeg = vegList.lastElementChild;
+
+// Remove the last 'li' element
+vegList.removeChild(lastVeg);
+
+// Access all 'li' elements in the 'oils' list
+const oilItems = oilsList.children;
+
+// Loop through and remove each 'li' element from the end
+while (oilsList.firstChild) {
+    oilsList.removeChild(oilsList.firstChild);
+}
+
+/////// 4. Replacing Elements
+
+// Create a new 'li' element
+const newFruitItem = document.createElement('li');
+newFruitItem.textContent = 'Strawberry';
+
+// Access the second 'li' element in the 'fruits' list
+const secondFruit = fruitsList.children[1];
+
+// Replace the second item with the new one
+fruitsList.replaceChild(newFruitItem, secondFruit);

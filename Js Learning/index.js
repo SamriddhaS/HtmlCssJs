@@ -516,3 +516,74 @@ console.log(school.classes[0].className);       // 'Math 101'
 console.log(school.classes[1].students[1].name); // 'Eve'
 
 
+
+//############# JS CLOSURES #####################################
+
+//Closures in JavaScript are a fundamental concept that
+//allows a function to access variables from its outer 
+//scope, even after the outer function has finished executing.
+//Closures help maintain the state of variables and enable powerful 
+//patterns like data hiding and function factories.
+
+function outerFunction() {
+    let count = 0; // This is a variable in the outer function's scope
+
+    function innerFunction() {
+        count++; // Inner function accesses and modifies the outer function's variable
+        console.log("Current Count : "+count);
+    }
+
+    return innerFunction; // Return the inner function
+}
+
+// outerFunction() is executed, returning innerFunction
+const counter = outerFunction(); 
+
+counter(); // Outputs: 1
+counter(); // Outputs: 2
+counter(); // Outputs: 3
+// How It Works:
+// outerFunction defines a variable count.
+// innerFunction is defined inside outerFunction and has access to count.
+// When outerFunction is called, it returns innerFunction, which still has access to the count variable even though outerFunction has finished executing.
+// Each time counter() (which is the returned innerFunction) is called, it increases count and logs it. The state of count is maintained across calls because of the closure.
+
+
+
+///// Closures and State Maintenance //////
+// Closures are particularly useful when you want to create functions
+// that have private data or maintain state between calls.
+
+function createCounter() {
+    let count = 0;
+
+    return {
+        increment: function() {
+            count++;
+            console.log("increment "+count);
+        },
+        decrement:function(){
+            count--;
+            console.log("decrement "+count);
+        },
+        reset: function() {
+            count = 0;
+            console.log('Counter reset to ', count);
+        }
+    };
+}
+
+const myCounter = createCounter();
+
+myCounter.increment(); // Outputs: 1
+myCounter.increment(); // Outputs: 2
+myCounter.reset();     // Outputs: Counter reset to 0
+myCounter.decrement(); // Outputs: 1
+
+// Summary:
+// Closures allow a function to remember and access its lexical
+// scope even when the function is executed outside that scope.
+// They are useful for maintaining state across multiple function
+// calls, implementing data encapsulation, and more.
+
+

@@ -352,3 +352,82 @@ class Person {
   person.firstName = 'Alice';
   console.log(person.fullName); // Alice Smith
   
+
+  // ################ Destructuring ##################
+
+  //// 1: Basic Array Destructuring /////
+  const numbers1 = [1, 2, 3, 4, 5];
+
+// Destructuring assignment
+const [first, second, third] = numbers1;
+
+console.log(first);  // 1
+console.log(second); // 2
+console.log(third);  // 3
+
+//// Example 2: Skipping Elements //////
+// You can skip elements in the array by
+// leaving the corresponding
+// positions empty.
+const numbers2 = [1, 2, 3, 4, 5];
+
+// Skipping the second and fourth elements
+const [first1, , third1, , fifth] = numbers2;
+
+console.log(first1);  // 1
+console.log(third1);  // 3
+console.log(fifth);  // 5
+
+////// Example 1: Basic Object Destructuring /////
+const person1 = {
+    name3: 'John',
+    age3: 30,
+    city: 'New York'
+};
+
+// Destructuring assignment
+const { name3, age3, city } = person1;
+
+console.log(name3);  // 'John'
+console.log(age3);   // 30
+console.log(city);  // 'New York'
+
+
+//////Example 2: Assigning to New Variable Names /////
+const person2 = {
+    name: 'Jane',
+    age: 25,
+    city: 'San Francisco'
+};
+
+// Assign to new variable names
+const { name: firstName, age: years, city: location3 } = person2;
+
+console.log(firstName);  // 'Jane'
+console.log(years);      // 25
+console.log(location3);   // 'San Francisco'
+
+
+////Example 1: Default Values with Arrays ///
+
+const numbers3 = [1, 2];
+
+// Assigning default value to third
+const [first0, second0, third0 = 3] = numbers3;
+
+console.log(first0);  // 1
+console.log(second0); // 2
+console.log(third0);  // 3 (default value)
+
+///// Example 2: Default Values with Objects ////
+const person0 = {
+    name0: 'Mike',
+    age0: 40
+};
+
+// Default value for city
+const { name0, age0, city0 = 'Unknown' } = person0;
+
+console.log(name0);  // 'Mike'
+console.log(age0);   // 40
+console.log(city0);  // 'Unknown' (default value)

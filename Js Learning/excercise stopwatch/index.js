@@ -45,3 +45,6 @@ function resetCount(){
 function shpwOutput(){
     document.getElementById("showValue").textContent = curremtValue
 }
+
+
+//############ ES6 Module ####################################

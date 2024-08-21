@@ -587,3 +587,20 @@ myCounter.decrement(); // Outputs: 1
 // calls, implementing data encapsulation, and more.
 
 
+//############ ES6 Module ####################################
+
+import { add, subtract } from './MathUtil.js';
+
+const sum = add(5, 3);
+console.log(`From other module--Sum: ${sum}`);  // Output: Sum: 8
+
+const difference = subtract(5, 3);
+console.log(`From other module--Difference: ${difference}`);  // Output: Difference: 2
+
+//Renaming Imports/Exports:
+import { multiply as mul } from './MathUtil.js';
+
+console.log("export with a different name--"+mul(4, 5));  // Output: 20
+
+// Importing everything from the module.
+import * as math from './MathUtil.js';
